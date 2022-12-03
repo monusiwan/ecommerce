@@ -1,0 +1,14 @@
+{% extends 'base1.html' %}
+
+
+{% block content %}
+
+<table>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{prod}}
+    </form>
+</table>
+
+{% endblock content %}
+    

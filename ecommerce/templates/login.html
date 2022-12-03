@@ -1,0 +1,35 @@
+{% extends 'base1.html' %}
+
+
+{% block content %}
+{% block title %}
+    <title>Login</title>
+{% endblock title %}
+<style>
+
+</style>
+<div class="container">
+    <div class="p-4 m-4">
+        <div class="col-lg-5 mx-auto border rounded p-2">
+            <h3 class="alert alert-light border rounded "> Login</h3>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="form-group pt-3 mx-auto">
+                    <table>
+                        <div>
+                            {{fm}}
+                        </div>
+
+                    </table>
+                </div>
+                <div class="form-group pt-2">
+                    <input type="submit" value="Login" class="btn btn-success form-control-sm">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

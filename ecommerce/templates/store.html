@@ -1,0 +1,22 @@
+{% extends 'base1.html' %}
+
+
+{% block content %}
+<div id='products' class="col-lg-8 mx-auto">
+    <div class="row mx-auto">
+        {% for p in product %}
+        <div class="card mx-auto mb-3" style="width: 18rem;">
+            <img src="{{p.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{p.name}}</h5>
+                <p class="card-text"><b>{{p.price}}</b></p>
+                <p class="card-text">{{p.description}}</p>
+                <a href="#" class="btn btn-light border btn-sm">Add To Cart</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock content %}
+    
